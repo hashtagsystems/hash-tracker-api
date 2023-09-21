@@ -1,10 +1,11 @@
 from rest_framework import serializers
+from api.serializers.project_serializer import ProjectSerializer
 from api.models import Category
 
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    created_by=serializers.StringRelatedField(read_only=True)
+    project=ProjectSerializer(many=True,read_only=True)
     class Meta:
-        model:Category
+        model=Project
         fields='__all__'
