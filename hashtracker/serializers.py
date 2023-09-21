@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
-from category.api.serializers import CategorySerializer
+from api.serializers.category_serializer import CategorySerializer
 
 class SignupSerializer(serializers.ModelSerializer):
    
